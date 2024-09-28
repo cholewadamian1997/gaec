@@ -1,0 +1,181 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    color: #fff;
+    background-color: #141414;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Hero Section */
+#hero {
+    background-image: url('concert-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+#hero h1 {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+}
+
+#hero p {
+    font-size: 1.5rem;
+}
+
+.cta-btn {
+    background-color: #ff4d4d;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.cta-btn:hover {
+    background-color: #ff1a1a;
+}
+
+/* About Section */
+#about {
+    background-color: #1c1c1c;
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Lineup Section */
+#lineup {
+    background-color: #141414;
+    padding: 50px 0;
+}
+
+#lineup h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.artist-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.artist-card {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+}
+
+.artist-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.artist-card h3 {
+    font-size: 1.5rem;
+}
+
+/* Tickets Section */
+#tickets {
+    background-color: #1c1c1c;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#tickets h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#tickets p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+#tickets .cta-btn {
+    font-size: 1.5rem;
+    background-color: #ff4d4d;
+}
+
+#tickets .cta-btn:hover {
+    background-color: #ff1a1a;
+}
+
+/* Footer */
+footer {
+    background-color: #0d0d0d;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 15px;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+}
+

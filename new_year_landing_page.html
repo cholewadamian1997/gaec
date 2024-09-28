@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join us for an enchanting New Year's concert featuring international songs of the world.">
+    <title>New Year's Concerts 2024</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <section id="hero" class="bg-dark text-light py-5 text-center">
+        <div class="container">
+            <h1 class="display-3" id="title">New Year's Concerts:<br>International Songs of the World</h1>
+            <p class="lead" id="description">Celebrate with music that inspires and unites!</p>
+            <p>Date: December 19, 2024 | Time: 16:00 and 18:30</p>
+            <p>Venue: Yehudi Menuhin Forum, Helvetiapl. 6, 3005 Bern</p>
+            <a href="#about" class="btn btn-light mt-4">Learn More</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto text-center">
+                    <h2 id="about-title">About the Event</h2>
+                    <p id="about-description" class="lead">We invite you to a magical New Year's concert organized by the Global Artistry and Enterprise Club (GAEC). This unique event brings together musical traditions from around the world, performed by the professional ensemble "Musikschatulle."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Section -->
+    <section id="program" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Program & Apero</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Program</h3>
+                    <ul id="program-list">
+                        <li>International New Year's Songs</li>
+                        <li>Classical Music</li>
+                        <li>Jazz Compositions</li>
+                        <li>Famous Film Melodies</li>
+                    </ul>
+                    <p>The repertoire includes musical pieces from different corners of the world, creating a festive mood and offering inspiration.</p>
+                </div>
+                <div class="col-md-6">
+                    <h3>Apero</h3>
+                    <p id="apero-description">Between concerts, we invite you to an apero, where a signature wine collection from Moldova will be presented, along with light snacks and drinks in a cozy atmosphere.</p>
+                    <p><strong>Payment:</strong> Payment for the apero can be made on-site in cash or via Twint.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Multilingual Section -->
+    <section id="multilingual" class="py-5">
+        <div class="container text-center">
+            <h2>Multilingual Support</h2>
+            <p>The concert will be conducted in English, with translation available into German, Russian, and Tatar.</p>
+            <button id="toggle-language" class="btn btn-outline-primary">View German Version</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container text-center">
+            <p>© 2024 New Year's Concert. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and JavaScript for Language Toggle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Variables to store English and German versions of the text
+        const englishContent = {
+            title: "New Year's Concerts: International Songs of the World",
+            description: "Celebrate with music that inspires and unites!",
+            aboutTitle: "About the Event",
+            aboutDescription: "We invite you to a magical New Year's concert organized by the Global Artistry and Enterprise Club (GAEC). This unique event brings together musical traditions from around the world, performed by the professional ensemble 'Musikschatulle.'",
+            programList: `
+                <li>International New Year's Songs</li>
+                <li>Classical Music</li>
+                <li>Jazz Compositions</li>
+                <li>Famous Film Melodies</li>
+            `,
+            aperoDescription: "Between concerts, we invite you to an apero, where a signature wine collection from Moldova will be presented, along with light snacks and drinks in a cozy atmosphere."
+        };
+
+        const germanContent = {
+            title: "Neujahrskonzerten: Internationale Lieder der Welt",
+            description: "Feiern Sie mit Musik, die inspiriert und vereint!",
+            aboutTitle: "Über die Veranstaltung",
+            aboutDescription: "Wir laden Sie zu einem magischen Neujahrskonzert ein, organisiert vom Global Artistry and Enterprise Club (GAEC). Dieses einzigartige Event vereint musikalische Traditionen aus der ganzen Welt, aufgeführt vom professionellen Ensemble 'Musikschatulle.'",
+            programList: `
+                <li>Internationale Neujahrslieder</li>
+                <li>Klassische Musik</li>
+                <li>Jazz-Kompositionen</li>
+                <li>Bekannte Filmmelodien</li>
+            `,
+            aperoDescription: "Zwischen den Konzerten laden wir Sie zu einem Apero ein, bei dem eine exklusive Weinkollektion aus Moldawien präsentiert wird, zusammen mit leichten Snacks und Getränken in gemütlicher Atmosphäre."
+        };
+
+        // Get the button and content elements
+        const toggleButton = document.getElementById('toggle-language');
+        const titleElement = document.getElementById('title');
+        const descriptionElement = document.getElementById('description');
+        const aboutTitleElement = document.getElementById('about-title');
+        const aboutDescriptionElement = document.getElementById('about-description');
+        const programListElement = document.getElementById('program-list');
+        const aperoDescriptionElement = document.getElementById('apero-description');
+
+        let isEnglish = true; // Initial language is English
+
+        // Function to switch between English and German
+        toggleButton.addEventListener('click', () => {
+            if (isEnglish) {
+                // Switch to German
+                titleElement.textContent = germanContent.title;
+                descriptionElement.textContent = germanContent.description;
+                aboutTitleElement.textContent = germanContent.aboutTitle;
+                aboutDescriptionElement.textContent = germanContent.aboutDescription;
+                programListElement.innerHTML = germanContent.programList;
+                aperoDescriptionElement.textContent = germanContent.aperoDescription;
+                toggleButton.textContent = 'View English Version';
+            } else {
+                // Switch to English
+                titleElement.textContent = englishContent.title;
+                descriptionElement.textContent = englishContent.description;
+                aboutTitleElement.textContent = englishContent.aboutTitle;
+                aboutDescriptionElement.textContent = englishContent.aboutDescription;
+                programListElement.innerHTML = englishContent.programList;
+                aperoDescriptionElement.textContent = englishContent.aperoDescription;
+                toggleButton.textContent = 'View German Version';
+            }
+            isEnglish = !isEnglish;
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Django specific
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+db.sqlite3
+*.db
+*.sqlite3-journal
+*.dat
+*.csv
+
+# Django migrations
+**/migrations/**
+
+# Django static files
+staticfiles/
+static/
+
+# Django media files
+media/
+
+# If you're using Django Compressor
+compressed/
+
+# Local environment settings
+.env
+.env.*
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Linux/Mac system file
+*.swp
+*.swo
+
+# Test and coverage results
+*.cover
+.coverage
+*.py,cover
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+*.log
+
+# Virtual environment folder
+venv/
+env/
+ENV/
+virtualenv/
+ENV*/
+
+# Ignore IDE specific files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# PyCharm specific files
+*.iml
+.idea/
+
+# JetBrains Rider
+.idea/
+*.sln
+*.csproj
+*.userprefs
+*.userossettings
+
+# Node.js dependencies (for front-end JS packages)
+node_modules/
+npm-debug.log
+yarn-error.log
+.pnpm-debug.log*
+
+# NPM lockfiles
+package-lock.json
+yarn.lock
+.pnp/
+.pnp.js
+
+# Ignore SASS/SCSS Cache
+.sass-cache/
+
+# Ignore any compiled frontend files (like if you're using React, Vue, etc. within Django)
+dist/
+build/
+
+# Ignore coverage folder created by coverage.py tool
+htmlcov/
+
+# Ignore Docker files
+docker-compose.override.yml
+.env.docker
+docker-data/
+
+# Ignore sensitive settings files
+config/settings/local.py
+config/settings/production.py
+config/.env
+
